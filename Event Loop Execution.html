@@ -1,26 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Event Loop Execution Demo</title>
+  <title>JavaScript Event Loop Demo</title>
   <script>
-    console.log(1);
+    // Helper function to show output on the page
+    function log(message) {
+      const p = document.createElement("p");
+      p.textContent = message;
+      document.body.appendChild(p);
+    }
 
-    setTimeout(() => console.log(2));
+    log(1);
 
-    Promise.resolve().then(() => console.log(3));
+    setTimeout(() => log(2));
 
-    Promise.resolve().then(() => setTimeout(() => console.log(4)));
+    Promise.resolve().then(() => log(3));
 
-    Promise.resolve().then(() => console.log(5));
+    Promise.resolve().then(() => setTimeout(() => log(4)));
 
-    setTimeout(() => console.log(6));
+    Promise.resolve().then(() => log(5));
 
-    console.log(7);
-  </script>
-</head>
-<body>
-  <h1>JavaScript Event Loop Demo</h1>
-  <p>Open the browser console to see the execution order of logs.</p>
-</body>
-</html>
-
+    setTimeout
