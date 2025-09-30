@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sum Salaries Demo</title>
+  <script>
+    // Function to sum all salaries
+    function sumSalaries(salaries) {
+      let sum = 0;
+      for (let salary of Object.values(salaries)) {
+        sum += salary;
+      }
+      return sum;
+    }
+
+    // Sample salaries object
+    let salaries = {
+      "John": 100,
+      "Pete": 300,
+      "Mary": 250
+    };
+
+    // Show result
+    alert("Total Salaries: " + sumSalaries(salaries)); 
+  </script>
+</head>
+<body>
+  <h1>Sum Salaries Demo</h1>
+  <p>Open this page in a browser to see the total salary calculation.</p>
+</body>
+</html>
