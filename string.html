@@ -1,3 +1,14 @@
+let user = {
+  name: "John Smith",
+  age: 35
+};
+
+let json = JSON.stringify(user);
+let parsedUser = JSON.parse(json);
+
+alert("JSON string: " + json);
+alert("Parsed name: " + parsedUser.name);
+alert("Parsed age: " + parsedUser.age);
 <!DOCTYPE html>
 <html>
 <head>
