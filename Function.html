@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Arrow Function Demo</title>
+  <script>
+    // Function using arrow syntax
+    const ask = (question, yes, no) => {
+      if (confirm(question)) yes();
+      else no();
+    };
+
+    // Call the function with arrow callbacks
+    ask(
+      "Do you agree?",
+      () => alert("You agreed."),
+      () => alert("You canceled the execution.")
+    );
+  </script>
+</head>
+<body>
+  <h1>Arrow Function Confirmation</h1>
+  <p>Open this page in a browser to see the confirm dialog and alerts.</p>
+</body>
+</html>
