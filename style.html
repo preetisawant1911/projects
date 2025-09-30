@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Power Function Demo</title>
+  <script>
+    // Function to calculate power
+    function pow(x, n) {
+      let result = 1;
+      for (let i = 0; i < n; i++) {
+        result *= x;
+      }
+      return result;
+    }
+
+    // Prompt user for input
+    let x = prompt("x?", '');
+    let n = prompt("n?", '');
+
+    // Convert input to numbers
+    x = Number(x);
+    n = Number(n);
+
+    // Validate input
+    if (n <= 0 || isNaN(x) || isNaN(n)) {
+      alert(`Power ${n} is not supported. Please enter a number greater than zero.`);
+    } else {
+      alert(`Result: ${pow(x, n)}`);
+    }
+  </script>
+</head>
+<body>
+  <h1>Power Function Demo</h1>
+  <p>Enter values for x and n to calculate xⁿ.</p>
+</body>
+</html>
